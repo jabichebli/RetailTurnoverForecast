@@ -39,9 +39,9 @@ Created by **Jason Abi Chebli**
 - Forecasting: Out-of-sample predictions with 80% prediction intervals through to December 2024
 
 ## Files
-<code>[RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd)</code> — Quarto file containing full analysis, diagnostics, and forecasts  
-<code>[RetailTurnoverForecast.html](RetailTurnoverForecast.html)</code> — Rendered output for easy viewing  
-<code>[abs_forecast_comparison.csv](abs_forecast_comparison.csv)</code> — Actual ABS data from Table 11 used for validating forecast accuracy
+<code>[RetailTurnoverForecast.qmd](31444059_Retail_Project.qmd)</code> — Quarto file containing full analysis, diagnostics, and forecasts  
+<code>[RetailTurnoverForecast.html](31444059_Retail_Project.html)</code> — Rendered output for easy viewing  
+<code>[abs_raw_data.xlsx](8501011.xlsx)</code> — Actual ABS data from [Table 11](https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads) used for validating forecast accuracy
 
 ## Visual Highlights
 - Seasonally adjusted line plots highlighting COVID-19 impacts
