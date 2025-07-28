@@ -42,8 +42,8 @@ You can explore the analysis conducted [here](https://jabichebli.github.io/Retai
 - Forecasting: Out-of-sample predictions with 80% prediction intervals through to December 2024
 
 ## Files
->[RetailTurnoverForecast.qmd](31444059_Retail_Project.qmd) — Quarto file containing full analysis, diagnostics, and forecasts  
->[RetailTurnoverForecast.html](31444059_Retail_Project.html) — Rendered output for easy viewing  
+>[RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd) — Quarto file containing full analysis, diagnostics, and forecasts  
+>[RetailTurnoverForecast.html](RetailTurnoverForecast.html) — Rendered output for easy viewing  
 >[abs_raw_data.xlsx](8501011.xlsx) — Actual ABS data from [Table 11](https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads) used for validating forecast accuracy
 
 ## Visual Highlights
