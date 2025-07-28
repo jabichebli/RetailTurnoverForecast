@@ -23,6 +23,9 @@ Created by **Jason Abi Chebli**
 - Generate 2-year forecasts and compare with actual ABS updates
 - Evaluate model accuracy and discuss their suitability
 
+## Project Brief 
+[Brief](https://github.com/jabichebli/RetailTurnoverForecast/blob/main/Retail_Project_Brief.pdf)
+
 ## Key Methods
 - Transformation: Box-Cox (λ estimated via Guerrero method)
 - Decomposition: STL for trend, seasonality, and residuals
