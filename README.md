@@ -43,7 +43,7 @@ You can explore the analysis conducted [here](https://jabichebli.github.io/Retai
 
 ## Files
 >[RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd) — Quarto file containing full analysis, diagnostics, and forecasts  
->[RetailTurnoverForecast.html](RetailTurnoverForecast.html) — Rendered output for easy viewing  
+>[index.html](index.html) — Rendered output for easy viewing  
 >[abs_raw_data.xlsx](8501011.xlsx) — Actual ABS data from [Table 11](https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads) used for validating forecast accuracy
 
 ## Visual Highlights
