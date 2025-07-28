@@ -6,7 +6,7 @@ Created by **Jason Abi Chebli**
 <div style="text-align: justify;">This project forecasts monthly turnover (in $Million AUD) for the Northern Territory's electrical and electronic goods retailing industry (Series ID: A3349598V) using classical time series techniques—ETS and ARIMA. The project is based on data from the Australian Bureau of Statistics (ABS) spanning April 1998 to December 2022 and aims to produce accurate and interpretable forecasts supported by statistical diagnostics and validation using updated real-world data.</div>
 
 ## Demo
-You can explore the analysis conducted [here](https://jabichebli.github.io/RetailTurnoverForecast/index.html).
+You can explore the analysis conducted [here](https://jabichebli.github.io/RetailTurnoverForecast/report/index.html).
 
 ## Dataset
 - Source: [Australian Bureau of Statistics (ABS)](https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads)
@@ -43,7 +43,7 @@ You can explore the analysis conducted [here](https://jabichebli.github.io/Retai
 
 ## Files
 >[RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd) — Quarto file containing full analysis, diagnostics, and forecasts  
->[index.html](index.html) — Rendered output for easy viewing  
+>[index.html](report/index.html) — Rendered output for easy viewing  
 >[abs_raw_data.xlsx](8501011.xlsx) — Actual ABS data from [Table 11](https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads) used for validating forecast accuracy
 
 ## Visual Highlights
