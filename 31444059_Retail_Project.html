@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jason Abi Chebli">
+<meta name="dcterms.date" content="2025-05-25">
+
+<title>ETC3550 Retail Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="31444059_Retail_Project_files/libs/clipboard/clipboard.min.js"></script>
+<script src="31444059_Retail_Project_files/libs/quarto-html/quarto.js"></script>
+<script src="31444059_Retail_Project_files/libs/quarto-html/popper.min.js"></script>
+<script src="31444059_Retail_Project_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="31444059_Retail_Project_files/libs/quarto-html/anchor.min.js"></script>
+<link href="31444059_Retail_Project_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="31444059_Retail_Project_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="31444059_Retail_Project_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="31444059_Retail_Project_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="31444059_Retail_Project_files/libs/bootstrap/bootstrap-1bc8a17f135ab3d594c857e9f48e611b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="31444059_Retail_Project_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="31444059_Retail_Project_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">ETC3550 Retail Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jason Abi Chebli </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 25, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="loading-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="loading-the-data">Loading the Data</h4>
+<p>Before conducting an analysis, it is good to take a look at the assigned time series data set. Table 1 shows a preview of the first five rows of dataset that will be used in this analysis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load all necessary packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fpp3)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to retrieve custom dataset</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>get_my_data <span class="ot">&lt;-</span> <span class="cf">function</span>(student_id) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(student_id)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  all_data <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_rds</span>(<span class="st">"https://bit.ly/monashretaildata"</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(<span class="cn">TRUE</span>) {</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    retail <span class="ot">&lt;-</span> <span class="fu">filter</span>(all_data, <span class="st">`</span><span class="at">Series ID</span><span class="st">`</span> <span class="sc">==</span> <span class="fu">sample</span>(<span class="st">`</span><span class="at">Series ID</span><span class="st">`</span>, <span class="dv">1</span>))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="sc">!</span><span class="fu">any</span>(<span class="fu">is.na</span>(<span class="fu">fill_gaps</span>(retail)<span class="sc">$</span>Turnover))) <span class="fu">return</span>(retail)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Retrieve personal data</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>retail <span class="ot">&lt;-</span> <span class="fu">get_my_data</span>(<span class="dv">31444059</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Have a look at the dataset</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(<span class="fu">head</span>(retail, <span class="dv">5</span>), <span class="at">caption =</span> <span class="st">"Table 1: Preview of Northern Territory's Electrical and Electronic Goods Retailing Data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 1: Preview of Northern Territory’s Electrical and Electronic Goods Retailing Data</caption>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 47%">
+<col style="width: 11%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">State</th>
+<th style="text-align: left;">Industry</th>
+<th style="text-align: left;">Series ID</th>
+<th style="text-align: left;">Month</th>
+<th style="text-align: right;">Turnover</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Northern Territory</td>
+<td style="text-align: left;">Electrical and electronic goods retailing</td>
+<td style="text-align: left;">A3349598V</td>
+<td style="text-align: left;">1988 Apr</td>
+<td style="text-align: right;">1.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Northern Territory</td>
+<td style="text-align: left;">Electrical and electronic goods retailing</td>
+<td style="text-align: left;">A3349598V</td>
+<td style="text-align: left;">1988 May</td>
+<td style="text-align: right;">1.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Northern Territory</td>
+<td style="text-align: left;">Electrical and electronic goods retailing</td>
+<td style="text-align: left;">A3349598V</td>
+<td style="text-align: left;">1988 Jun</td>
+<td style="text-align: right;">1.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Northern Territory</td>
+<td style="text-align: left;">Electrical and electronic goods retailing</td>
+<td style="text-align: left;">A3349598V</td>
+<td style="text-align: left;">1988 Jul</td>
+<td style="text-align: right;">1.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Northern Territory</td>
+<td style="text-align: left;">Electrical and electronic goods retailing</td>
+<td style="text-align: left;">A3349598V</td>
+<td style="text-align: left;">1988 Aug</td>
+<td style="text-align: right;">1.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As can be seen from this small preview (and if you take a look at the whole data), this investigation will be looking at the turnover (in $Million AUD) of Northern Territory’s electrical and electronic goods retailing industry (Series ID: A3349598V) from April 1998 to December 2022.</p>
+</section>
+<section id="question-1-plotting-the-time-series" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-plotting-the-time-series">Question 1: Plotting the Time Series</h4>
+<p>The following plots were produced in order to help better understand the turnover (in $Million AUD) of Northern Territory’s electrical and electronic goods retailing industry over the years:</p>
+<ul>
+<li><code>autoplot()</code></li>
+<li><code>gg_season()</code></li>
+<li><code>gg_subseries()</code></li>
+</ul>
+<p><u>Time Series <code>autoplot()</code> Plot</u></p>
+<p>A time series <code>autoplot()</code> plot of the data can be seen in Figure 1.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the time series using autoplot()</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>retail <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(Turnover) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 1: Northern Territory's Electrical and Electronic Goods Retailing Turnover</span><span class="sc">\n</span><span class="st">over Time (1988-2022)"</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-1-a-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>What is Learnt From <code>autoplot()</code> Plot</u></p>
+<p><em>At a General Glance:</em> We see that the turnover in Nothern Territory’s electrical and electronics good retailing has grown a lot since 1998, with some sort of correction occuring around 2013, but it seems to be recovering and potentially bouncing back.</p>
+<p><em>Trend:</em> There seems to be an overall long-term positive trend in Northern Territory’s turnover of electrical and electronic goods retailing.</p>
+<p><em>Seasonality:</em> There seems to be a growing variance in seasonality as the years progress, evident by the increase in height of the fluctuations over the years.</p>
+<p><em>Cyclical Behaviour:</em> There seems to be a cyclical behavior that may follow the average business cycle of electrical and electronics good retailing in Northern Territory. This behavior can be seen with growth followed by a correction (such as a correction betwen 1996-1998 and 2013-2019).</p>
+<p><u>Time Series <code>gg_season()</code> Plot</u></p>
+<p>A time series <code>gg_season()</code> plot of the data can be seen in Figure 2.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the time series using gg_season()</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>retail <span class="sc">|&gt;</span> <span class="fu">gg_season</span>(Turnover) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 2: Northern Territory's Electrical and Electronic Goods Retailing Turnover</span><span class="sc">\n</span><span class="st">Seasonal Plot (1988-2022)"</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-1-b-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>What is Learnt From <code>gg_season()</code> Plot</u></p>
+<p>From the seasonal plot, we can see that Northern Territory’s electrical and electronic goods retailing turnover:</p>
+<ul>
+<li><em>Before 1997 (orange/yellow lines):</em> In general, turnover was quite flat throughout the year but spiked in December. This spike is most likely due to Christmas sales. Additionally, there is not a lot of turnover growth between 1988 and 1997, evident from the small spread of the orange/yellow lines over the years. The low growth is most likely due to the lack of technology being widely available and cheap before 1997.<br>
+</li>
+<li><em>Between 1997 and 2007 (green lines):</em> Turnover continued to be highest in December, however, there now seemed to be a more visible ramp-up in turnover in the months leading up to December in this period. Additionally, there seemed to be significant growth in turnover between 1997 and 2007, as seen from the large spread of the green lines. This is most likely due to electronics and electrical goods being more affordable and available.<br>
+</li>
+<li><em>Between 2007 and 2017 (blue/purple lines):</em> Turnover continued to be the highest in December, but with less of a ramp-up and instead a sharp increase between November and December. Significant growth occurred between 2007 and ~2013, visible from the large spread of the blue lines. In fact, the highest turnover to date seemed to occur in December between this period. However, turnover seemed to decline between 2013 and 2017, as the purple lines remained at levels similar to 2007.<br>
+</li>
+<li><em>Between 2017 and 2022 (pink lines):</em> Turnover continued to be the highest in December, with an increasing turnover occuring in June and November The decline in turnover growth between 2017 and ~2020 persisted (evident from the pink line dropping below the purple line), but it now appears to be recovering, with the dark pink line approaching the top of the chart.</li>
+</ul>
+<p><em>Final Remarks:</em></p>
+<ul>
+<li>Throughout 1998 to 2022, December seemed to always have the highest turnover peak.<br>
+</li>
+<li>The highest retail turnover occurred in December ~2013, and retail levels in 2022 remain lower than this all-time high.<br>
+</li>
+<li>Compared to before 1997, the turnover has grown a lot, but in recent years seemed to have dropped, but on its way to recovery.</li>
+<li>While there seems to be fluctuating spikes throughout the months, in particular between February and March each year, this is due to the fact that not all months have the same amount of days (and especially February which has even less than usual). An improvement to this plot would be to normalise the data by the number of days in that month.</li>
+</ul>
+<p><u>Time Series <code>gg_subseries()</code> Plot</u></p>
+<p>A time series <code>gg_subseries()</code> plot of the data can be seen in Figure 3.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the time series using gg_subseries()</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>retail <span class="sc">|&gt;</span> <span class="fu">gg_subseries</span>(Turnover) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 3: Northern Territory's Electrical and Electronic Goods Retailing Turnover</span><span class="sc">\n</span><span class="st">Sub Series Plot (1988-2022)"</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>)  <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-1-c-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>What is Learnt From <code>gg_subseries()</code> Plot</u></p>
+<p>From this plot, we can see that Northern Territory’s electrical and electronic goods retailing turnover:</p>
+<ul>
+<li><em>Growth:</em> Has shown high growth every month from 1988 to 2022, with a visible drop between 2013 and 2020.<br>
+</li>
+<li><em>Highest Turnover:</em> Has had the highest average turnover in December over the years.<br>
+</li>
+<li><em>Lowest Turnover:</em> Has had the lowest average turnover in February and April. However, as mentioned, this does not take into account that February has the least amount of days out of all the months. When accounting for the number of days in each month, the lowest turnover month may potentially be neither. Regardless, between February and April, since April has more days than February, it appears that April may be the lowest turnover month.<br>
+</li>
+<li><em>Pre-December Increase:</em> Has seen a growing average turnover in the months leading up to December, particularly in November.</li>
+</ul>
+</section>
+<section id="question-2-statistical-features-of-the-time-series" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-statistical-features-of-the-time-series">Question 2: Statistical Features of the Time Series</h4>
+<p>The time series analysis seen in Question 1 of Northern Territory’s electrical and electronic goods retailing turnover reveals the following key statistical features:</p>
+<p><em>Trend</em></p>
+<ul>
+<li>There is a clear long-term upward trend in turnover, particularly strong growth post-1998.</li>
+<li>A notable correction occurred around 2013 to 2019 with a recent sign of recovery approaching 2022.</li>
+</ul>
+<p><em>Seasonality</em></p>
+<ul>
+<li>The data exhibits strong seasonal patterns, with consistent peaks in December each year, likely due to holiday sales.</li>
+<li>There is a visible ramp-up in turnover in the months leading to December, especially in November and June in recent years.</li>
+<li>Seasonal amplitude has increased over time, indicating growing seasonal variation in turnover.</li>
+</ul>
+<p><em>Cyclic Behaviour</em></p>
+<ul>
+<li>Beyond regular seasonality, the data shows signs of cyclical behavior aligned with broader economic or business cycles, such as:
+<ul>
+<li>A correction phase between 1996–1998 and again from 2013–2019.</li>
+<li>Periods of accelerated growth, notably from 1997–2007 and 2007–2013.</li>
+</ul></li>
+</ul>
+<p><em>Variation Over Time</em></p>
+<ul>
+<li>The spread and magnitude of turnover values have increased significantly since the late 1990s, indicating higher variance and stronger market dynamics.</li>
+<li>Variance is more pronounced in the later years, reflecting increased market activity and possibly changing consumer behavior.</li>
+</ul>
+<p><em>Outliers and Sudden Changes</em></p>
+<ul>
+<li>~2020 marked a large peak, due to COVID-19 and people needing more electronic applicances for home (more obvious when looking at the remainder term in Figure 5 below).</li>
+<li>A sharp dip in growth is observed between 2013 and 2020, potentially driven by external factors (e.g., economic slowdown or market saturation).</li>
+<li>Sudden year-on-year increases, especially between 1997–2007, may suggest periods of technological adoption and retail expansion.</li>
+</ul>
+<p><em>Monthly Characteristics</em></p>
+<ul>
+<li>December consistently records the highest turnover, followed by rising activity in November and June in recent years.</li>
+<li>February and April show the lowest average turnover, though this is partly due to the fewer number of days in February.</li>
+</ul>
+<p><em>Data Considerations</em></p>
+<ul>
+<li>Observed fluctuations between February and March are partially due to unequal month lengths, suggesting a need to normalise turnover by the number of days per month for more accurate monthly comparisons.</li>
+</ul>
+</section>
+<section id="question-3-determining-an-appropriate-box-cox-transformation" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-determining-an-appropriate-box-cox-transformation">Question 3: Determining an Appropriate Box-Cox Transformation</h4>
+<p><u>Box-Cox Transformation Plot</u></p>
+<p>A series of plots of a range of Box-Cox transformation parameters can be seen in Figure 4.</p>
+<div class="columns">
+<p><strong>Figure 4: Northern Territory’s Electrical and Electronic Goods Retailing Turnover with a Range of Box-Cox Transformation Parameters, λ</strong></p><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-3i-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-3ii-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-3iv-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-3iii-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><u>Finding an Appropriate Box-Cox Transformation</u></p>
+<p>The Box-Cox transformation parameter is most suitable between 0 and 1. As such, Figure 4(a) and Figure 4(b) illustrate the two extremes of this. As can be seen in Figure 4(b) (and Figure 1, as it is identical), the variance of the seasonlity grows throughout 1988 to 2022. As such, a Box-Cox Transformation will be suitable as Box-Cox transformations only work (well) when there is only an increase in seasonality variance growth. Figure 4(a) gave an insight that closer to 0, the seasonlity variance will be more equal. As such, trial error was conducted closer to 0, testing <span class="math inline">\(\lambda = 0.1, 0.2, 0.3, 0.4, 0.5\)</span> and it was found that a <span class="math inline">\(\lambda = 0.1\)</span> was most suitable (seen in Figure 4(c)). As a good check, this lambda value was compared to a derived lambda value using Guerrero feature. Guerrero determined an acceptable <span class="math inline">\(\lambda \approx 0.1112\)</span> and the plot can be seen in Figure 4(d).</p>
+<p><u>Explaining the Chosen Transformation Parameter</u>, <span class="math inline">\(\lambda = 0.1\)</span></p>
+<p>In the end, a <span class="math inline">\(\lambda = 0.1\)</span> was determined to be the chosen transformation parameter. As the Box-Cox transformation parameter is insensitive to small variance, it makes no major difference to use the exact guerrero deduced <span class="math inline">\(\lambda\)</span> or the one I deduced through trial and error. As such, choosing the more simple one to one decimal place seemed like the best decision. When investigating different <span class="math inline">\(\lambda\)</span> values, all values below or equal 0 caused a smaller variance near the end - which is not what we want. Alternatively, all <span class="math inline">\(\lambda\)</span> values above 0.1 caused the variance in the seasonlity to still grow as the years went on. Therefore, <span class="math inline">\(\lambda = 0.1\)</span> was chosen as the most suitable, as it resulted in a similar-sized seasonality (i.e., reduced the growth of the seasonality) and even made the plot slightly more linear (not achieving a pure linear fit as there was a big dip in 2013 to 2020).</p>
+</section>
+<section id="question-4-stl-decomposition-of-the-transformed-data" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-stl-decomposition-of-the-transformed-data">Question 4: STL Decomposition of the Transformed Data</h4>
+<p><u>STL Decomposition Plot</u></p>
+<p>A plot of an STL decomposition of the transformed data (Box-Cox Transformation, <span class="math inline">\(\lambda = 0.1\)</span>) can be seen in Figure 5.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the STL decomposition of the transformed data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stl_dcmp <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">model</span>(<span class="at">stl =</span> <span class="fu">STL</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>)  <span class="sc">~</span> <span class="fu">trend</span>(<span class="at">window =</span> <span class="dv">19</span>) <span class="sc">+</span> <span class="fu">season</span>(<span class="at">window =</span> <span class="dv">13</span>), <span class="at">robust =</span> <span class="cn">TRUE</span> )) <span class="sc">|&gt;</span> <span class="fu">components</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>stl_dcmp <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(<span class="st">`</span><span class="at">box_cox(Turnover, 0.1)</span><span class="st">`</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 5: Transformed Northern Territory's Electrical and Electronic Goods Retailing</span><span class="sc">\n</span><span class="st">Turnover STL Decomposition Plot (1988-2022)"</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>What is Learnt From This STL Decomposition Plot</u></p>
+<p>In regards to Northern Territory’s electrical and electronic goods retailing turnover over the years, we can see from the STL decomposition plot that:</p>
+<ul>
+<li><em>Decomposition Type:</em> There is an additive decomposition of trend, seasonality and remainder occurring.</li>
+<li><em>Trend:</em> There is a positive long-term upward trend, with a large dip occurring between 2013 and approximately 2019, but it is rebounding upwards now. Regarding trend, a <code>window = 19</code> was chosen as the most appropriate as this resulted in helping remove trend from the remainder term without making the trend curve too smooth/straight.<br>
+</li>
+<li><em>Seasonality:</em> There is strong seasonality that seems to grow as the years progress. Given the large time horizon of the data, we would expect some slight change in seasonality over the years given electronics and electrical goods have become a lot more common in more recent years and that is why I did not set the <code>window = 'periodic'</code> as it would be an incorrect assumption. Instead, for seasonality, a <code>window = 13</code> was chosen as the most appropriate as it ensured that seasonality is not captured in the remainder term (for higher windows, seasonality is seen in the remainder term), while still letting seasonality grow slightly over the years as it would be expected to have it grow over the years, given the large time horizon and popularity of electronics and electrical goods.<br>
+</li>
+<li><em>Remainder:</em> In general, the remainder is somewhat noisy. Some key points that could not be removed from the remainder was the massive drop seen to have occurred around approximately 1997-1998 suggesting that there may have been an event that caused or disrupted the electrical and electronic goods retailing sector in Northern Territory. Another peak also appeared in early 2000 most likely due to the Dot-Com boom and the mass adoption of electronics and electrical goods - like computers. Similarly a large peak occurring in 2020 due to COVID-19 and people needing more electronic applicances for home is also evident in the remainder.</li>
+</ul>
+<p>Overall, this STL decomposition I would say adequately decomposes the time series into trend-cycle, seasonality, and remainder as:</p>
+<ul>
+<li>The trend-cycle component seems just right to reflect the underlying pattern in the data.</li>
+<li>The seasonality seems just right to reflect the underlying pattern in the data.</li>
+<li>The remainder does not seem to contain signs of trends, cycles, or seasonality.</li>
+</ul>
+</section>
+<section id="question-5-stationary-data" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-stationary-data">Question 5: Stationary Data</h4>
+<p>A stationary time series is one whose statistical properties do not depend on the time at which the series is observed. Therefore, time series with trends or seasonality are not stationary. As seen above, the data exhibits both trend and seasonality, indicating that it is not stationary. To proceed with ARIMA time series modelling, we must transform the data to make it stationary.</p>
+<p>One useful transformation is the Box-Cox transformation, which stabilises the variance of a time series. As observed in Question 3, a Box-Cox transformation with <span class="math inline">\(\lambda = 0.1\)</span> is appropriate for this dataset. However, while this transformation addresses variance, it does not remove trend or seasonality. To address those components, differencing is required. There are two types of differencing - Non-Seasonal Differencing (the change between one observation and the next) and Seasonal Differencing (the change between one year to the next). The two types of differencing stabilises the mean by removing trends and seasonal patterns.</p>
+<p>We first need to evaluate whether seasonal differencing is required. Table 2 outlines the Seasonal Strength (<span class="math inline">\(F_s\)</span>) and the <code>nsdiffs</code> of the Box-Cox Transformed Time Series.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the seasonal strength</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>seasonal_strength <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">features</span>(</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>),</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    feat_stl) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(seasonal_strength_year)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the ns difference</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>nsdiffs_result <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">features</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), unitroot_nsdiffs) <span class="sc">|&gt;</span> <span class="fu">select</span>(nsdiffs)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Display the Seasonal Strength and ns difference together in a table</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(seasonal_strength,nsdiffs_result) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 2: Seasonal Strength and Number of Seasonal Differences Required (nsdiffs)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 2: Seasonal Strength and Number of Seasonal Differences Required (nsdiffs)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">seasonal_strength_year</th>
+<th style="text-align: right;">nsdiffs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.8242743</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>According to Table 2, the seasonal strength from STL decomposition is <span class="math inline">\(F_s \approx 0.82\)</span>, and the nsdiffs function also recommends 1 seasonal difference. Since <span class="math inline">\(F_s &gt; 0.64\)</span> and nsdiffs = 1, both metrics confirm that seasonal differencing is necessary. This conclusion aligns with the clear seasonality observed in before. Consequently, seasonal differencing is definitely needed to remove the seasonal component.</p>
+<p>Figure 6 illustrates the Seasonally Differenced, Box-Cox Transformed Time Series Data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the seasonally differenced, box-cox transformed data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>retail <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gg_tsdisplay</span>(</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), <span class="dv">12</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"partial"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 6: Seasonally Differenced Box-Cox Transformed Time Series</span><span class="sc">\n</span><span class="st">with ACF and PACF Plots"</span>, <span class="at">y =</span> <span class="st">"Transformed Turnover"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-5-plot-seasonally-differenced-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>While the seasonality appears reduced in Figure 6, a trend remains somewhat visible. The current ACF plot in Figure 6 clearly indicates that there is some data uncaptured. Performing a Random Walk with Drift with a seasonal difference time series is not the most appropriate in this case as the data seems to trending down in some parts and trending up in other parts. Consequently, as a trend is apparent and changing in the time series, an additional non-seasonal differencing may be necessary instead. To confirm, we conduct both a KPSS test and calculate the number of required regular differences using <code>ndiffs</code>, seen in Table 3.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the kpss p_value</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>kpss_result <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">features</span>(</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>),<span class="dv">12</span>),</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    unitroot_kpss) <span class="sc">|&gt;</span> <span class="fu">select</span>(kpss_pvalue)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Determine the ndifference</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>ndiffs_result <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">features</span>(<span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>),<span class="dv">12</span>), unitroot_ndiffs) <span class="sc">|&gt;</span> <span class="fu">select</span>(ndiffs)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Display the kpss p_value and ndifference together in a table</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_cols</span>(kpss_result,ndiffs_result) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 3: KPSS p-value and Number of Differences Required (ndiffs) on Seasonally Differenced Data"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 3: KPSS p-value and Number of Differences Required (ndiffs) on Seasonally Differenced Data</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">kpss_pvalue</th>
+<th style="text-align: right;">ndiffs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">0.0278238</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As seen in Table 3, the p-value of the seasonally difference Box-Cox transformed time series is approximately 0.0278238. Recall that the null hypothesis of the KPSS test is that the data is stationary and non-seasonal. Hence, as the p-value is less than 0.05, so we reject the null hypothesis. This suggests that the data is likely non-stationary and that non-seasonal differencing is required to make it stationary. This conclusion is also supported by the <code>ndiffs</code>, with a value of 1, which suggests that the seasonally differenced Box-Cox transformed series requires non-seasonal differencing to achieve stationarity.</p>
+<p>Therefore, non-seasonal differencing is applied in addition to the seasonal differencing. Figure 7 illustrates all of the transformations applied.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the seasonally differenced, box-cox transformed data</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>retail <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gg_tsdisplay</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">difference</span>(<span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), <span class="dv">12</span>),<span class="dv">1</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"partial"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  )  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 7: Fully Differenced (Seasonal + Non-Seasonal) Box-Cox Transformed </span><span class="sc">\n</span><span class="st">Time Series with ACF and PACF Plots"</span>, <span class="at">y =</span> <span class="st">"Transformed Turnover"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-5-plot-fully-transformed-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Figure 7 shows the final transformed time series, which exhibits the key characteristics of a stationary series:</p>
+<ul>
+<li>Constant mean (no visible trend)</li>
+<li>Stable variance over time</li>
+<li>No strong seasonal pattern</li>
+</ul>
+<p>While some autocorrelation remains in the ACF, the series no longer displays systematic non-stationarity. Thus, we consider the data sufficiently stationary for modelling purposes.</p>
+<p>To conclude, the differencing required on the Box-Cox (<span class="math inline">\(\lambda = 0.1\)</span>) Transformed data includes:</p>
+<ol type="1">
+<li>Seasonal Differencing (<span class="math inline">\(lag = 12\)</span>) to remove annual seasonality, confirmed by STL and <code>nsdiffs</code>.</li>
+<li>Non-Seasonal Differencing (<span class="math inline">\(lag = 1\)</span>) to eliminate remaining trend, confirmed by KPSS and <code>ndiffs</code>.</li>
+</ol>
+<p>These differencings ensure that the transformed time series meets the stationary assumption for ARIMA modelling.</p>
+</section>
+<section id="question-6-short-listing-arima-and-ets-models" class="level4">
+<h4 class="anchored" data-anchor-id="question-6-short-listing-arima-and-ets-models">Question 6: Short-Listing ARIMA and ETS Models</h4>
+<p>The current data available ranges from April 1998 to December 2022. For this question, the Northern Territory electrical and electronic goods retailing industry turnover data set is split into two sets:</p>
+<ul>
+<li><strong>Train set:</strong> Apr 1988 to Dec 2021</li>
+<li><strong>Test set:</strong> Jan 2021 to Dec 2022</li>
+</ul>
+<p>It was done like this such that the test set consisted of the last 24 months of the data provided.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the train set from 1988 to end of 2020 and the test set from 2021 to 2022</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>retail_trainset <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">filter</span>(Month <span class="sc">&lt;</span> <span class="fu">yearmonth</span>(<span class="st">"2021 Jan"</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>retail_testset <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">filter</span>(Month <span class="sc">&gt;=</span> <span class="fu">yearmonth</span>(<span class="st">"2021 Jan"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><u><strong>Creating a Short-List of Appropriate ARIMA Models</strong></u></p>
+<p>To create a short-list of appropriate ARIMA models for the data provided, one should plot the ACF and PACF plots to see whether it gives any insights that can help identify the most appropriate ARIMA models.</p>
+<p>An ACF and PACF plot with 72 lags of the transformed Northern Territory electrical and electronic goods retail turnover data can be seen in Figure 8 and Figure 9, respectively.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>retail_trainset <span class="sc">|&gt;</span> <span class="fu">ACF</span>(<span class="fu">difference</span>(<span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), <span class="dv">12</span>),<span class="dv">1</span>), <span class="at">lag_max =</span> <span class="dv">72</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 8: ACF Plot of Transformed Turnover Series"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-6-acf-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>retail_trainset <span class="sc">|&gt;</span> <span class="fu">PACF</span>(<span class="fu">difference</span>(<span class="fu">difference</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), <span class="dv">12</span>),<span class="dv">1</span>), <span class="at">lag_max =</span> <span class="dv">72</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>() <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 9: PACF Plot of Transformed Turnover Series"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-6-pacf-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>An ARIMA model can be written as: <span class="math display">\[ARIMA(p,d,q)(P,D,Q)[m]\]</span> Where <span class="math inline">\((p,d,q)\)</span> represent the non-seasonal AR, differencing, and MA terms, and <span class="math inline">\((P,D,Q)[m]\)</span> represent the seasonal AR, differencing, and MA terms, with seasonal period <span class="math inline">\(m=12\)</span> for monthly data.</p>
+<p><u>Non-Seasonal Component, <span class="math inline">\((p,d,q)\)</span></u></p>
+<p>From the ACF Plot in Figure 8:</p>
+<ul>
+<li>A significant negative spike at lag 1, followed by a rapid decay.</li>
+<li>Ignoring the major significant spikes at lags 12 and 36 (which will be discussed later in the context of the seasonal component), there are also minor significant spikes throughout the plot, which are arguably negligible.</li>
+<li>A sinusoidal pattern is arguably present.</li>
+</ul>
+<p>From the PACF Plot in Figure 9:</p>
+<ul>
+<li>A significant negative spike at lag 1, followed by a rapid decay.</li>
+<li>Ignoring the major spikes at lags 12, 24, 36, and 48 (related to the seasonal component), there are other small spikes, such as at lags 13 and 16, which can also be considered negligible.</li>
+<li>A sinusoidal pattern is again arguably present.</li>
+</ul>
+<p>Therefore, regarding the non-seasonal <span class="math inline">\((p,d,q)\)</span> terms:</p>
+<ul>
+<li>As established in Question 5, non-seasonal differencing was required to achieve stationarity. Thus, we set <span class="math inline">\(d = 1\)</span> for all suggested models.</li>
+<li>A significant spike at lag 1 in the PACF, with the ACF showing a sinusoidal decay, suggests an AR(1) process: <span class="math inline">\((p,d,q) = (1,1,0)\)</span>.</li>
+<li>Alternatively, a significant spike at lag 1 in the ACF, with the PACF exhibiting a sinusoidal pattern, suggests an MA(1) process: <span class="math inline">\((p,d,q) = (0,1,1)\)</span>.</li>
+<li>Given both plots show sinusoidal behavior, both configurations are plausible. Thus, two potential non-seasonal components are considered:
+<ul>
+<li><span class="math inline">\((p,d,q) = (1,1,0)\)</span></li>
+<li><span class="math inline">\((p,d,q) = (0,1,1)\)</span></li>
+</ul></li>
+</ul>
+<p><u>Seasonal Component, <span class="math inline">\((P,D,Q)[m]\)</span></u></p>
+<p>From the ACF Plot in Figure 8:</p>
+<ul>
+<li>A major significant spike at lag 12, followed by another at lag 36. No significant spikes appear at lags 24, 48, or 60.</li>
+</ul>
+<p>From the PACF Plot in Figure 9:</p>
+<ul>
+<li>Major significant spikes at lags 12, 24, 36, and 48, with a somewhat exponential decay.</li>
+</ul>
+<p>Therefore, regarding the seasonal <span class="math inline">\((P,D,Q)[m]\)</span> terms:</p>
+<ul>
+<li>As established in Question 5, seasonal differencing was necessary to achieve stationarity. Hence, we set <span class="math inline">\(D = 1\)</span>.</li>
+<li>The somewhat exponential decay in the PACF suggests a lack of seasonal AR terms: <span class="math inline">\(P = 0\)</span>.</li>
+<li>In the ACF plot, the spike at lag 12 is significant, while lag 24 is not, suggesting a seasonal MA(1) process: <span class="math inline">\(Q = 1\)</span>.</li>
+<li>Therefore, the seasonal component is: <span class="math inline">\((P,D,Q) = (0,1,1)\)</span></li>
+</ul>
+<p><u>Plausible ARIMA Models</u></p>
+<p>Based on the ACF and PACF plots, three plausible ARIMA models for this data set include:</p>
+<p><strong>Model 1: ARIMA(1,1,0)(0,1,1)[12]</strong></p>
+<ul>
+<li><em>Non-seasonal:</em> AR(1) term (PACF spike at lag 1) and first-order differencing.</li>
+<li><em>Seasonal:</em> MA(1) term (ACF spike at lag 12) and first-order seasonal differencing.</li>
+</ul>
+<p><strong>Model 2: ARIMA(0,1,1)(0,1,1)[12]</strong></p>
+<ul>
+<li><em>Non-seasonal:</em> MA(1) term (ACF spike at lag 1) and first-order differencing.</li>
+<li><em>Seasonal:</em> MA(1) term (ACF spike at lag 12) and first-order seasonal differencing.</li>
+</ul>
+<p><strong>Model 3: ARIMA Automatically Chosen</strong></p>
+<ul>
+<li>One should always also consider the ARIMA model automatically chosen for the data. This is because the automatically select ARIMA model is the best-fitting model based on AIC values.</li>
+</ul>
+<p>The three models, ARIMA(1,1,0)(0,1,1)[12], ARIMA(0,1,1)(0,1,1)[12] and the automatically selected ARIMA model, were fitted to the training data and used to forecast the test period from 2021–2022. Figure 10 presents the forecasts produced by each model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit three ARIMA models</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>ARIMA_fits <span class="ot">&lt;-</span> retail_trainset <span class="sc">|&gt;</span> <span class="fu">model</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ARIMA_110011 =</span> <span class="fu">ARIMA</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">pdq</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="sc">+</span> <span class="fu">PDQ</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ARIMA_011011 =</span> <span class="fu">ARIMA</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">pdq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>) <span class="sc">+</span> <span class="fu">PDQ</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)),</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ARIMA_auto =</span> <span class="fu">ARIMA</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>), <span class="at">stepwise =</span> <span class="cn">FALSE</span>, <span class="at">approximation =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Forecast for 24 months (2021–2022)</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>ARIMA_forecasts <span class="ot">&lt;-</span> ARIMA_fits <span class="sc">|&gt;</span> <span class="fu">forecast</span>(<span class="at">h =</span> <span class="st">"24 months"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot forecasts (automatically back-transforms Box-Cox)</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>ARIMA_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>(retail_testset, <span class="at">level =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 10: ARIMA Forecasts for NT Electrical &amp; Electronic Goods Turnover"</span>,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>,</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-6-ARIMA-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>From Figure 10, we can observe that all three ARIMA models perform reasonably similar in predicting the Northern Territory’s Electrical and Electronic Goods Turnover, with the one automatically selected seeming to perform slightly better in some parts and slightly worse in other parts - compared to the two picked models.</p>
+<p>It is also worth noting that the auto-selected model was ARIMA(1,1,1)(2,1,2)[12]. Both the seasonal and non-seasonal component of the automatically selected model would not have been predictable from the ACF or PACF plots.</p>
+<p>Table 4 outlines the AIC score for the three different ARIMA models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare Models AIC</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ARIMA_fits <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span> <span class="fu">select</span>(.model, AIC) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 4: AIC Score for the Different ARIMA Models"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 4: AIC Score for the Different ARIMA Models</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">AIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_110011</td>
+<td style="text-align: right;">-684.2086</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ARIMA_011011</td>
+<td style="text-align: right;">-689.7166</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_auto</td>
+<td style="text-align: right;">-691.9995</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As can be seen in Table 4, the model with the lowest AIC Score is the automatically selected ARIMA model (ARIMA(1,1,1)(2,1,2)[12]). This suggests that the automatically selected model is the best in-sample fit. This makes sense as the automatically selected model was deduced by having the lowest AIC score.</p>
+<p>Regarding RMSE, Table 5 shows the test set RMSE scores for the different models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare RMSE </span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>ARIMA_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">accuracy</span>(retail_testset) <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.model, RMSE) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 5: RMSE Score for the Different ARIMA Models"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 5: RMSE Score for the Different ARIMA Models</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_011011</td>
+<td style="text-align: right;">1.275618</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ARIMA_110011</td>
+<td style="text-align: right;">1.272721</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_auto</td>
+<td style="text-align: right;">1.440088</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As shown in Table 5, the ARIMA(1,1,0)(0,1,1)[12] model had the lowest RMSE score, followed extremely closesly by ARIMA(0,1,1)(0,1,1)[12], and then the automatically selected ARIMA model. Consequently, this suggests that the best model based on the test set RMSE is the ARIMA(1,1,0)(0,1,1)[12] model. Note that both of the hand selected models performed better according to the RMSE score than the automatically selected model determined as the best model according to AIC.</p>
+<p>For future forecasts, the best model to use would be the ARIMA(1,1,0)(0,1,1)[12] rather than the ARIMA(0,1,1)(0,1,1)[12] or the automatically chosen ARIMA model. The reason is that RMSE is a better measure of out-of-sample performance, meaning it performs best on unseen data. Therefore, I would choose the ARIMA(1,1,0)(0,1,1)[12] model for future forecasts, as it generalises better to new observations. Although the RMSE score for the ARIMA(0,1,1)(0,1,1)[12] was really close, when looking at the AIC score, it also did not perform as well compared to the best model, making ARIMA(1,1,0)(0,1,1)[12] the better choice. Additionally, although the ARIMA(1,1,0)(0,1,1)[12] had a slightly higher AIC score than the automatically selected one, it did, however, have less parameters. Therefore, when considering the number of parameters as well as performance, ARIMA(1,1,0)(0,1,1)[12] seems like the most appropriate model choice.</p>
+<p><u><strong>Creating a Short-List of Appropriate ETS Models</strong></u></p>
+<p>To create a short-list of appropriate ETS models for the data provided, one should better understand the data to see whether it gives any insights that can help identify the most appropriate ETS models.</p>
+<p>As we saw in the Figures in Question 1 and Question 4:</p>
+<ul>
+<li><em>Error:</em> The remainder component appears relatively noisy, with certain events resulting in some fluctuations.</li>
+<li><em>Trend:</em> There is a clear upward trend in the Box-Cox transformed retail turnover data, indicating a long-term growth in the series.</li>
+<li><em>Seasonality:</em> There is strong seasonality that seems to grow and change over the years - most likely due to popularisation and mass adoption of electronics and electrical goods.</li>
+</ul>
+<p><u>Plausible ETS Models</u></p>
+<p>Based on this information, three plausible ETS models for this data set include:</p>
+<p><strong>Model 1: ETS(A, A, A)</strong></p>
+<ul>
+<li><em>Error: Additive (A)</em> The fluctuations in the remainder component are relatively stable, suggesting additive error is appropriate.</li>
+<li><em>Trend: Additive (A)</em> The trend is not as pronounced as a multiplicative trend, and although it shows long-term growth, the growth rate does not seem to accelerate multiplicatively, thus an additive trend is a reasonable choice.</li>
+<li><em>Seasonality: Additive (A)</em> The seasonal pattern shows a somewhat regular and somewhat constant fluctuation, so an additive seasonal model is appropriate.</li>
+</ul>
+<p><strong>Model 2: ETS(A, Ad, A)</strong></p>
+<ul>
+<li><em>Error: Additive (A)</em> The fluctuations in the remainder component are relatively stable, suggesting additive error is appropriate.</li>
+<li><em>Trend: Additive Damped (Ad)</em> The additive damped trend is chosen because the series exhibits growth that appears to slow down over time. In this case, the trend starts off relatively strong but gradually becomes less pronounced, which is characteristic of a damped trend.</li>
+<li><em>Seasonality: Additive (A)</em> The seasonal pattern shows a somewhat regular and somewhat constant fluctuation, so an additive seasonal model is appropriate.</li>
+</ul>
+<p><strong>Model 3: ETS Automatically Chosen</strong></p>
+<ul>
+<li>One should always also consider the ETS model automatically chosen for the data. This is because the automatically select ETS model is the best-fitting model based on AIC values.</li>
+</ul>
+<p>The three models, ETS(A,A,A), ETS(A,Ad,A) and the automatically selected ETS model, were fitted to the training data and used to forecast the test period from 2021–2022. Figure 11 presents the forecasts produced by each model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit three ARIMA models</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>ETS_fits <span class="ot">&lt;-</span> retail_trainset <span class="sc">|&gt;</span> <span class="fu">model</span>(</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ETS_AAA =</span> <span class="fu">ETS</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">error</span>(<span class="st">"A"</span>) <span class="sc">+</span> <span class="fu">trend</span>(<span class="st">"A"</span>) <span class="sc">+</span> <span class="fu">season</span>(<span class="st">"A"</span>)),</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ETS_AAdA =</span> <span class="fu">ETS</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">error</span>(<span class="st">"A"</span>) <span class="sc">+</span> <span class="fu">trend</span>(<span class="st">"Ad"</span>) <span class="sc">+</span> <span class="fu">season</span>(<span class="st">"A"</span>)),</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ETS_auto =</span> <span class="fu">ETS</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>))</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Forecast for 24 months (2021–2022)</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>ETS_forecasts <span class="ot">&lt;-</span> ETS_fits <span class="sc">|&gt;</span> <span class="fu">forecast</span>(<span class="at">h =</span> <span class="st">"24 months"</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot forecasts (automatically back-transforms Box-Cox)</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>ETS_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>(retail_testset, <span class="at">level =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 11: ETS Forecasts for NT Electrical &amp; Electronic Goods Turnover"</span>,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Retail Turnover (in $Million AUD)"</span>,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-6-ETS-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>From Figure 11, we can observe that all three ETS models perform reasonably similar in predicting the Northern Territory’s Electrical and Electronic Goods Turnover, with the ETS(A,Ad,A) seeming to potentially perform the best. It is also worth noting that the auto-selected ETS model ETS(A,N,A).</p>
+<p>Table 6 outlines the AIC score for the three different ETS models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare Models AIC</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ETS_fits <span class="sc">|&gt;</span> <span class="fu">glance</span>() <span class="sc">|&gt;</span> <span class="fu">select</span>(.model, AIC) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 6: AIC Score for the Different ETS Models"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 6: AIC Score for the Different ETS Models</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">AIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ETS_AAA</td>
+<td style="text-align: right;">576.4497</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ETS_AAdA</td>
+<td style="text-align: right;">522.6214</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ETS_auto</td>
+<td style="text-align: right;">521.0123</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As can be seen in Table 6, the model with the lowest AIC Score is the automatically selected ETS model. This suggests that the automatically selected ETS model is the best in-sample fit. This makes sense as the automatically selected model was deduced by having the lowest AIC score.</p>
+<p>Regarding RMSE, Table 7 shows the test set RMSE scores for the different ETS models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare RMSE </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>ETS_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">accuracy</span>(retail_testset) <span class="sc">|&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.model, RMSE) <span class="sc">|&gt;</span> <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 7: RMSE Score for the Different ETS Models"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 7: RMSE Score for the Different ETS Models</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ETS_AAA</td>
+<td style="text-align: right;">1.249461</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ETS_AAdA</td>
+<td style="text-align: right;">1.208306</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ETS_auto</td>
+<td style="text-align: right;">1.350527</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As shown in Table 7, the ETS(A,Ad,A) model had the lowest RMSE score, followed by ETS(A,A,A) model, and then the automatically selected ETS model. Consequently, this suggests that the best model based on the test set RMSE is the ETS(A,Ad,A) model. Note that both of the visually deduced models perform better according to the RMSE score than the automatically selected ETS model determined as the best model according to AIC.</p>
+<p>For future forecasts, the best ETS model to use would be the ETS(A,Ad,A) model rather than automatically selected ETS model determined by the lowest AIC. The reason is that RMSE is a better measure of out-of-sample performance, meaning it performs best on unseen data. Therefore, I would choose the ETS(A,Ad,A) model for future forecasts, as it generalises better to new observations.</p>
+<p><u>Comparing ARIMA and ETS Models</u></p>
+<p>Note that when comparing the ARIMA models to the ETS models, one cannot use the AIC score. This is because the AIC score is only useful when comparing models of the same type. If we wanted to compare the ARIMA models to the ETS models, we would have to determine how well it went on an out-of-sample test - such as the RMSE score. When comparing Tables 5 and 7, the best ETS model (ETS(A,Ad,A)), has a lower RMSE score than the best ARIMA model (ARIMA(1,1,0)(0,1,1)[12]), indicating that the ETS(A,Ad,A) model may be the most appropriate out of all models.</p>
+</section>
+<section id="question-7-evaluating-the-best-arima-and-ets-model" class="level4">
+<h4 class="anchored" data-anchor-id="question-7-evaluating-the-best-arima-and-ets-model">Question 7: Evaluating the best ARIMA and ETS Model</h4>
+<p>As seen in Question 6, the most appropriate ARIMA and ETS Model from the Short List include:</p>
+<ul>
+<li>ARIMA(1,1,0)(0,1,1)[12]</li>
+<li>ETS(A,Ad,A)</li>
+</ul>
+<p><u>Evaluating the Best ARIMA Model</u></p>
+<p><em>Parameter Estimates</em></p>
+<p>The parameter estimates for the ARIMA(1,1,0)(0,1,1)[12] model can be seen below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the best ARIMA model</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ARIMA_best_fit <span class="ot">&lt;-</span> ARIMA_fits <span class="sc">|&gt;</span> <span class="fu">select</span>(ARIMA_110011) </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Output the parameter estimates</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>ARIMA_best_fit <span class="sc">|&gt;</span> <span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: Turnover 
+Model: ARIMA(1,1,0)(0,1,1)[12] 
+Transformation: box_cox(Turnover, 0.1) 
+
+Coefficients:
+          ar1     sma1
+      -0.2277  -0.8083
+s.e.   0.0500   0.0397
+
+sigma^2 estimated as 0.009256:  log likelihood=345.1
+AIC=-684.21   AICc=-684.14   BIC=-672.39</code></pre>
+</div>
+</div>
+<p>As seen, the parameter estimates are:</p>
+<ul>
+<li>AR(1) = -0.2277</li>
+<li>Seasonal MA(1) = -0.8083</li>
+</ul>
+<p>These parameters suggest that the differenced turnover series is negatively influenced by its values 1 month ago, with the first lag having a somewhat strong effect. There is also a strong negative seasonal moving average component, indicating that unexpected shocks from the same period in the previous year significantly impact the current turnover.</p>
+<p><em>Residual Diagnostics</em></p>
+<p>To evaluate whether the residuals of the best ARIMA model is white noise, we will look at both the ACF Plot and the LJung Box Calculations.</p>
+<p><u>ACF Plot</u></p>
+<p>A residual plot with ACF can be seen in Figure 12.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the residuals</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ARIMA_best_fit <span class="sc">|&gt;</span> <span class="fu">gg_tsresiduals</span>()  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 12: Residual Diagnostic Plots of Best ARIMA Model"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-7-ARIMA-acf-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>Do the residuals appear to be white noise?</u></p>
+<p>The residuals can be classified as white noise if the residuals are i.i.d., and as such meaning:</p>
+<ul>
+<li>The residuals must have a mean of 0</li>
+<li>The residuals should be uncorrelated</li>
+<li>The residuals should exhibit constant variance (homoskedastic)</li>
+<li>The residuals should follow a normal distribution</li>
+</ul>
+<p>Looking at Figure 12 we can say that:</p>
+<ul>
+<li>The residuals do seem to have a mean of 0 as can be seen in the scatter plot (with only one main outlier)</li>
+<li>The residuals do seem to follow somewhat of a normal distribution as seen the histogram (with only one main outlier)</li>
+<li>The residuals do seem to be homoskedastic, with a somewhat constant variance in the innovation residuals, as seen in the scatter plot. (Note there are a few large spikes, most likely due to an external event, but in general it is homoskedastic)</li>
+</ul>
+<p>However, we can also see from Figure 12 that:</p>
+<ul>
+<li>The <strong>residuals are correlated</strong>, as seen in the ACF plot. We observe correlation in the ACF plot because, for the residuals to be uncorrelated, we would expect 95% of the spikes in the ACF to lie within the blue dashed line threshold. However, this is not the case, as 3 out of 24 (12.5%) lines lie outside the blue dashed threshold.</li>
+</ul>
+<p>Consequently, given these factors, it is clear from the ACF plot that the residuals do appear to be white noise.</p>
+<p><u>LJung Box Calculations</u></p>
+<p>The LJung Box Calculations summary can be seen in Table 8.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the ljung box</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>ARIMA_ljung_box_val <span class="ot">&lt;-</span> ARIMA_best_fit <span class="sc">|&gt;</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(.innov)) <span class="sc">|&gt;</span> </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">features</span>(.innov, ljung_box, <span class="at">lag =</span> <span class="dv">24</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.model, lb_pvalue) <span class="sc">|&gt;</span> </span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Model =</span> .model, <span class="st">'LB P-Value'</span> <span class="ot">=</span> lb_pvalue)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(ARIMA_ljung_box_val , <span class="at">caption =</span> <span class="st">"Table 8: LJung Box Calculations P-value for the Best ARIMA Model"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 8: LJung Box Calculations P-value for the Best ARIMA Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Model</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">LB P-Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_110011</td>
+<td style="text-align: right;">0.0242949</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>From the Ljung-Box test, the LB P-value is the most insightful in determining whether the residuals appear to be white noise. Given that the LB P-Value is approximately 0.02, which is less than 0.05, we can conclude that the residuals are distinguishable from a white noise series. In other words, it indicates that there is significant autocorrelation in the residuals. This suggests that the ARIMA(1,1,0)(0,1,1)[12] model may not have captured all the patterns in the data.</p>
+<p><u>Overall Conclusion</u></p>
+<p>Overall, it can be concluded that both the ACF plot and the Ljung-Box calculation suggest that the residuals of the best ARIMA model do not appear to be white noise.</p>
+<p><em>Forecasts and Prediction Intervals</em></p>
+<p>The point forecasts and the 80% prediction intervals for the last 24 months (Jan 2021 to Dec 2022) can be visualised in Figure 13 and numerically summarised in Table 9.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the forecasts and intervals</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ARIMA_forecasts <span class="sc">|&gt;</span> <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ARIMA_110011"</span>) <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(retail_testset, <span class="at">level =</span> <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 13: Forecast and Prediction Intervals from Best ARIMA Model</span><span class="sc">\n</span><span class="st">of the Last 24 Months "</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-7-ARIMA-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Outline the numerical values of the point forecasts and intervals</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>ARIMA_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ARIMA_auto"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hilo</span>(<span class="at">level =</span> <span class="dv">80</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span> <span class="ot">=</span> .mean, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">80%</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">gsub</span>(<span class="st">"80$"</span>, <span class="st">""</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>)) <span class="sc">|&gt;</span>  <span class="co"># Remove the "80" at the end</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Month, <span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 9: Point Forecast and Prediction Intervals from Best ARIMA Model"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 9: Point Forecast and Prediction Intervals from Best ARIMA Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Point Forecast</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">80% Prediction Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2021 Jan</td>
+<td style="text-align: right;">14.34239</td>
+<td style="text-align: left;">[13.0350430739502, 15.6931474500099]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Feb</td>
+<td style="text-align: right;">13.47770</td>
+<td style="text-align: left;">[11.9511539699666, 15.0677944053233]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Mar</td>
+<td style="text-align: right;">15.21908</td>
+<td style="text-align: left;">[13.3031535137343, 17.2241431058847]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Apr</td>
+<td style="text-align: right;">14.25157</td>
+<td style="text-align: left;">[12.2819002189327, 16.3223576196695]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 May</td>
+<td style="text-align: right;">15.09001</td>
+<td style="text-align: left;">[12.8622382206396, 17.4404587925225]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Jun</td>
+<td style="text-align: right;">16.60220</td>
+<td style="text-align: left;">[14.0194588762993, 19.3353151771688]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Jul</td>
+<td style="text-align: right;">16.15937</td>
+<td style="text-align: left;">[13.498345736635, 18.9850747583993]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Aug</td>
+<td style="text-align: right;">16.91123</td>
+<td style="text-align: left;">[14.0004065155846, 20.0109768124907]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Sep</td>
+<td style="text-align: right;">16.14162</td>
+<td style="text-align: left;">[13.2252339910113, 19.2574494558045]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Oct</td>
+<td style="text-align: right;">16.88327</td>
+<td style="text-align: left;">[13.7213362517933, 20.2700408161107]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Nov</td>
+<td style="text-align: right;">18.04023</td>
+<td style="text-align: left;">[14.5563178866102, 21.780281260365]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Dec</td>
+<td style="text-align: right;">23.39352</td>
+<td style="text-align: left;">[18.8324587944347, 28.2934208576209]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Jan</td>
+<td style="text-align: right;">15.72744</td>
+<td style="text-align: left;">[12.3545734678926, 19.3784963012663]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Feb</td>
+<td style="text-align: right;">14.67038</td>
+<td style="text-align: left;">[11.3596375840711, 18.2700452537878]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Mar</td>
+<td style="text-align: right;">16.72217</td>
+<td style="text-align: left;">[12.848020514184, 20.9444363534216]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Apr</td>
+<td style="text-align: right;">15.89242</td>
+<td style="text-align: left;">[12.0611607558765, 20.0835801848636]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 May</td>
+<td style="text-align: right;">16.81226</td>
+<td style="text-align: left;">[12.6482378812111, 21.3794917240365]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Jun</td>
+<td style="text-align: right;">18.09505</td>
+<td style="text-align: left;">[13.5080603261692, 23.1379946852744]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Jul</td>
+<td style="text-align: right;">17.65525</td>
+<td style="text-align: left;">[13.0413593017258, 22.7438684969651]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Aug</td>
+<td style="text-align: right;">18.15425</td>
+<td style="text-align: left;">[13.2952670536563, 23.5269673515759]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Sep</td>
+<td style="text-align: right;">17.61568</td>
+<td style="text-align: left;">[12.7681306714155, 22.9922746714247]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Oct</td>
+<td style="text-align: right;">18.05407</td>
+<td style="text-align: left;">[12.9786406271594, 23.6971717563592]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Nov</td>
+<td style="text-align: right;">19.20163</td>
+<td style="text-align: left;">[13.7124265712235, 25.316754762731]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Dec</td>
+<td style="text-align: right;">25.02053</td>
+<td style="text-align: left;">[17.8892267429037, 32.9622192508163]</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>As can be seen in Figure 13, the point forecasts lie close to the true retail turnover, with the true retail turnover being within the 80% confidence interval. This illustrates that the ARIMA model is very suitable at making out-of-sample predictions. Note as can be seen in Table 9 and seen in Figure 13, the confidence intervals seems to grow as time goes on, which is reasonable as predictions further in the future are more uncertain. Overall, the ARIMA(1,1,0)(0,1,1)[12] model seems to appropriately capture the data set quite well.</p>
+<p><u>Evaluating the Best ETS Model</u></p>
+<p><em>Parameter Estimates</em></p>
+<p>The parameter estimates for the ETS(A, Ad, A) model can be seen below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the best ARIMA model</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>ETS_best_fit <span class="ot">&lt;-</span> ETS_fits <span class="sc">|&gt;</span> <span class="fu">select</span>(ETS_AAdA)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the parameter estimates</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>ETS_best_fit <span class="sc">|&gt;</span> <span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: Turnover 
+Model: ETS(A,Ad,A) 
+Transformation: box_cox(Turnover, 0.1) 
+  Smoothing parameters:
+    alpha = 0.70836 
+    beta  = 0.02010977 
+    gamma = 0.08702635 
+    phi   = 0.908875 
+
+  Initial states:
+      l[0]        b[0]        s[0]      s[-1]      s[-2]     s[-3]      s[-4]
+ 0.7040617 -0.01227266 -0.06799219 -0.1764354 -0.1308135 0.3854646 0.05946246
+     s[-5]      s[-6]      s[-7]      s[-8]       s[-9]      s[-10]     s[-11]
+ 0.0776855 0.04510672 0.01871803 0.02278884 -0.03027363 -0.06032358 -0.1433878
+
+  sigma^2:  0.0092
+
+     AIC     AICc      BIC 
+522.6214 524.4502 594.1499 </code></pre>
+</div>
+</div>
+<p>As seen, the ETS smoothing parameter estimates are:</p>
+<ul>
+<li>alpha (<span class="math inline">\(\alpha\)</span>) = 0.70836</li>
+<li>beta (<span class="math inline">\(\beta\)</span>) = 0.02010977</li>
+<li>gamma (<span class="math inline">\(\gamma\)</span>) = 0.08702635</li>
+<li>phi (<span class="math inline">\(\phi\)</span>) = 0.908875</li>
+</ul>
+<p>The relatively high alpha signifies that the model heavily relies on the most recent observations for forecasting the level. The quite low beta and gamma values suggest that trend and seasonality are present but do not dominate the model. The damping factor (phi) is close to 1, meaning the trend component will gradually diminish over time.</p>
+<p>We also see from the initial trend, b[0], as it is negative, it signifies that the trend is slightly decreasing.</p>
+<p><em>Residual Diagnostics</em></p>
+<p>To evaluate whether the residuals of the best ETS model is white noise, we will look at both the ACF Plot and the LJung Box Calculations.</p>
+<p><u>ACF Plot</u></p>
+<p>A residual plot with ACF can be seen in Figure 14.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the residuals</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>ETS_best_fit <span class="sc">|&gt;</span> <span class="fu">gg_tsresiduals</span>()  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 14: Residual Diagnostic Plots of Best ETS Model"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-7-ETS-acf-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><u>Do the residuals appear to be white noise?</u></p>
+<p>The residuals can be classified as white noise if the residuals are i.i.d., and as such meaning:</p>
+<ul>
+<li>The residuals must have a mean of 0</li>
+<li>The residuals should be uncorrelated</li>
+<li>The residuals should exhibit constant variance (homoskedastic)</li>
+<li>The residuals should follow a normal distribution</li>
+</ul>
+<p>Looking at Figure 14 we can say that:</p>
+<ul>
+<li>The residuals do seem to have a mean of 0 as can be seen in the scatter plot</li>
+<li>The residuals do seem to be homoskedastic, with a somewhat constant variance in the innovation residuals, as seen in the scatter plot. (Note there are one or two large spikes, most likely due to an external event, but in general it is homoskedastic)</li>
+<li>The residuals do seem to follow somewhat of a normal distribution as seen the histogram</li>
+</ul>
+<p>However, we can also see from Figure 14 that:</p>
+<ul>
+<li>The <strong>residuals are correlated</strong>, which can be seen in the ACF Plot. We see there is correlation in the ACF plot because for it to be uncorrelated, we would expect 95% of the spikes in the ACF to lie within the blue dashed line threshold, however, this is not the case, with 4 out of 24 (16.67%) lines lying outside the blue dashed threshold.</li>
+</ul>
+<p>Consequently, given these factors, it is clear from the ACF plot that the residuals do <strong>not</strong> appear to be white noise.</p>
+<p><u>LJung Box Calculations</u></p>
+<p>The LJung Box Calculations summary can be seen in Table 10.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the ljung box</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>ETS_ljung_box_val <span class="ot">&lt;-</span> ETS_best_fit <span class="sc">|&gt;</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">augment</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(.innov)) <span class="sc">|&gt;</span> </span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">features</span>(.innov, ljung_box, <span class="at">lag =</span> <span class="dv">24</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(.model, lb_pvalue) <span class="sc">|&gt;</span> </span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Model =</span> .model, <span class="st">'LB P-Value'</span> <span class="ot">=</span> lb_pvalue)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(ETS_ljung_box_val , <span class="at">caption =</span> <span class="st">"Table 10: LJung Box Calculations P-value for the Best ETS Model"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 10: LJung Box Calculations P-value for the Best ETS Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Model</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">LB P-Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ETS_AAdA</td>
+<td style="text-align: right;">0.0078574</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>From the LJung Box Test, the LB P-Value is the most insightful in telling us whether the residuals appear to be white noise. Given that the LB P-Value is 0.01, which is less than 0.05, we can conclude that the residuals are distinguishable from a white noise series. In other words, it indicates that there is significant autocorrelation in the residuals. This suggests that the best ETS model may not have captured all the patterns in the data.</p>
+<p><u>Overall Conclusion</u></p>
+<p>Overall, it can be seen that both the ACF Plot and the LJung Box Calculation conclude that the residuals do not appear to be white noise.</p>
+<p><em>Forecasts and Prediction Intervals</em></p>
+<p>The point forecasts and the 80% prediction intervals for the last 24 months (Jan 2021 to Dec 2022) can be visualised in Figure 15 and numerically summarised in Table 11.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>ETS_forecasts <span class="sc">|&gt;</span> <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ETS_AAdA"</span>) <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(retail_testset, <span class="at">level =</span> <span class="dv">80</span>)  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 15: Forecast and Prediction Intervals from Best ETS Model</span><span class="sc">\n</span><span class="st">of the Last 24 Months "</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-7-ETS-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>ETS_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ETS_AAdA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hilo</span>(<span class="at">level =</span> <span class="dv">80</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span> <span class="ot">=</span> .mean, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">80%</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">gsub</span>(<span class="st">"80$"</span>, <span class="st">""</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>)) <span class="sc">|&gt;</span>  <span class="co"># Remove the "80" at the end</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Month, <span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 11: Point Forecast and Prediction Intervals from Best ETS Model"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 11: Point Forecast and Prediction Intervals from Best ETS Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Point Forecast</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">80% Prediction Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2021 Jan</td>
+<td style="text-align: right;">14.42926</td>
+<td style="text-align: left;">[13.0969453656855, 15.8064095421249]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Feb</td>
+<td style="text-align: right;">13.41356</td>
+<td style="text-align: left;">[11.8786758037004, 15.0130370996692]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Mar</td>
+<td style="text-align: right;">15.08173</td>
+<td style="text-align: left;">[13.0990347845057, 17.1609592407224]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Apr</td>
+<td style="text-align: right;">14.05995</td>
+<td style="text-align: left;">[11.9654501426982, 16.2708833527823]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 May</td>
+<td style="text-align: right;">14.92311</td>
+<td style="text-align: left;">[12.4860712930113, 17.5096102519884]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Jun</td>
+<td style="text-align: right;">16.14305</td>
+<td style="text-align: left;">[13.2995109774431, 19.1757972893913]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Jul</td>
+<td style="text-align: right;">15.59370</td>
+<td style="text-align: left;">[12.6305287457817, 18.7709337739244]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Aug</td>
+<td style="text-align: right;">16.43532</td>
+<td style="text-align: left;">[13.1216996299754, 20.0043099335187]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Sep</td>
+<td style="text-align: right;">16.05704</td>
+<td style="text-align: left;">[12.6201985432599, 19.7767299316876]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Oct</td>
+<td style="text-align: right;">16.82414</td>
+<td style="text-align: left;">[13.0470103255997, 20.928997981057]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2021 Nov</td>
+<td style="text-align: right;">17.54646</td>
+<td style="text-align: left;">[13.4313205919344, 22.0364344421264]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2021 Dec</td>
+<td style="text-align: right;">22.53728</td>
+<td style="text-align: left;">[17.1430761783736, 28.4341444168191]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Jan</td>
+<td style="text-align: right;">14.90734</td>
+<td style="text-align: left;">[11.0136141398964, 19.2014617917176]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Feb</td>
+<td style="text-align: right;">13.85154</td>
+<td style="text-align: left;">[10.072201446683, 18.0393493383655]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Mar</td>
+<td style="text-align: right;">15.55327</td>
+<td style="text-align: left;">[11.2078725743239, 20.3812394364855]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Apr</td>
+<td style="text-align: right;">14.49465</td>
+<td style="text-align: left;">[10.2851311049195, 19.1930159514622]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 May</td>
+<td style="text-align: right;">15.37042</td>
+<td style="text-align: left;">[10.7939201877379, 20.4939888699801]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Jun</td>
+<td style="text-align: right;">16.61125</td>
+<td style="text-align: left;">[11.5578713951868, 22.2840596681831]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Jul</td>
+<td style="text-align: right;">16.04041</td>
+<td style="text-align: left;">[11.0110721379254, 21.708460443003]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Aug</td>
+<td style="text-align: right;">16.89404</td>
+<td style="text-align: left;">[11.4852388410979, 23.0068969092401]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Sep</td>
+<td style="text-align: right;">16.49998</td>
+<td style="text-align: left;">[11.0758772368418, 22.6526526714617]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Oct</td>
+<td style="text-align: right;">17.27777</td>
+<td style="text-align: left;">[11.4892555215132, 23.8616105371965]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2022 Nov</td>
+<td style="text-align: right;">18.00970</td>
+<td style="text-align: left;">[11.8644925701507, 25.0179896755734]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2022 Dec</td>
+<td style="text-align: right;">23.09903</td>
+<td style="text-align: left;">[15.2269513497249, 32.0750930820578]</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>As can be seen in Figure 15, similar to the ARIMA model, the ETS point forecasts lie close to the true retail turnover, with the true retail turnover being within the 80% confidence interval. This illustrates that the ETS model is very suitable at making out-of-sample predictions. Note as can be seen in Table 11 and seen in Figure 15, the ETS prediction intervals seems to grow as time goes on, which is reasonable as predictions further in the future are more uncertain. Overall, the ETS(A,Ad,A) model seems to appropriately capture the data set quite well.</p>
+</section>
+<section id="question-8-compare-the-results-of-the-arima-and-ets-model" class="level4">
+<h4 class="anchored" data-anchor-id="question-8-compare-the-results-of-the-arima-and-ets-model">Question 8: Compare the Results of the ARIMA and ETS Model</h4>
+<p>As can be seen in the above sections, the best ARIMA and ETS Model make similar point forecasts and prediction intervals for the 24 months period in the test set. The RMSE score for both of the best models can be seen in Table 12.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare RMSE </span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>(</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  ETS_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ETS_AAdA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">accuracy</span>(retail_testset) <span class="sc">|&gt;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(.model, RMSE),</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>  ARIMA_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ARIMA_110011"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">accuracy</span>(retail_testset) <span class="sc">|&gt;</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(.model, RMSE)</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span> </span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 12: RMSE Score for the two Best ETS Model"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 12: RMSE Score for the two Best ETS Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ETS_AAdA</td>
+<td style="text-align: right;">1.208306</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ARIMA_110011</td>
+<td style="text-align: right;">1.272721</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As can be seen in Table 12, the best ETS model, ETS (A,Ad,A) has a lower RMSE score than the best ARIMA model, the ARIMA(1,1,0)(0,1,1)[12] model. This suggests that the ETS model will perform better on out-of-sample forecasts. Consequently, based on the test set, the best model is the ETS (A,Ad,A) model.</p>
+</section>
+<section id="question-9-full-data-training-and-forecasting" class="level4">
+<h4 class="anchored" data-anchor-id="question-9-full-data-training-and-forecasting">Question 9: Full Data Training and Forecasting</h4>
+<p>The two best models, the ETS (A, Ad, A) and the ARIMA(1,1,0)(0,1,1)[12] Model are now going to be applied to the full data.</p>
+<p>Forecasts were made for two years (24 months) past the data provided, i.e.&nbsp;Jan 2023 to Dec 2024, as can be seen in Figure 16.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the best ARIMA and ETS models on the full data set</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>best_fits <span class="ot">&lt;-</span> retail <span class="sc">|&gt;</span> <span class="fu">model</span>(</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ARIMA_110011 =</span> <span class="fu">ARIMA</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">pdq</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>) <span class="sc">+</span> <span class="fu">PDQ</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>)),</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">ETS_AAdA =</span> <span class="fu">ETS</span>(<span class="fu">box_cox</span>(Turnover, <span class="fl">0.1</span>) <span class="sc">~</span> <span class="fu">error</span>(<span class="st">"A"</span>) <span class="sc">+</span> <span class="fu">trend</span>(<span class="st">"Ad"</span>) <span class="sc">+</span> <span class="fu">season</span>(<span class="st">"A"</span>))</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Forecast the next 24 months (2023–2024)</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="ot">&lt;-</span> best_fits <span class="sc">|&gt;</span> <span class="fu">forecast</span>(<span class="at">h =</span> <span class="st">"24 months"</span>)</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot forecasts (automatically back-transforms Box-Cox)</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>(retail, <span class="at">level =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 16: The Best ARIMA and ETS Forecasts for NT Electrical &amp; Electronic Goods Turnover"</span>,</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    , <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>,</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-9-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>At a general glance, the predictions for the best ARIMA and ETS model seem to be similar.</p>
+<p><em>Best ARIMA Model Parameters</em></p>
+<p>The parameter estimates for the ARIMA(1,1,0)(0,1,1)[12] model can be seen below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>best_fits <span class="sc">|&gt;</span> <span class="fu">select</span>(ARIMA_110011) <span class="sc">|&gt;</span> <span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: Turnover 
+Model: ARIMA(1,1,0)(0,1,1)[12] 
+Transformation: box_cox(Turnover, 0.1) 
+
+Coefficients:
+          ar1     sma1
+      -0.2444  -0.8093
+s.e.   0.0487   0.0393
+
+sigma^2 estimated as 0.009301:  log likelihood=366.22
+AIC=-726.45   AICc=-726.39   BIC=-714.44</code></pre>
+</div>
+</div>
+<p>As seen, the parameter estimates are:</p>
+<ul>
+<li>AR(1) = -0.2444</li>
+<li>Seasonal MA(1) = -0.8093</li>
+</ul>
+<p>Similar to the previous analysis, these parameters suggest that the differenced turnover series is negatively influenced by its value 1 month ago, with the first lag having a somewhat strong effect. There is also a strong negative seasonal moving average component, indicating that unexpected shocks from the same period in the previous year significantly impact the current turnover.</p>
+<p>Compared to the previous parameters, the new estimates are slightly stronger.</p>
+<p><em>Best ARIMA Model Forecasts and Prediction Intervals</em></p>
+<p>The point forecasts and the 80% prediction intervals for the following 24 months (Jan 2023 to Dec 2024 ) can be visualised in Figure 17 and numerically summarised in Table 13.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span> <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ARIMA_110011"</span>) <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(retail, <span class="at">level =</span> <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 17: Forecast and Prediction Intervals from Best ARIMA Model</span><span class="sc">\n</span><span class="st">of the Next 24 Months "</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-9-ARIMA-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ARIMA_110011"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hilo</span>(<span class="at">level =</span> <span class="dv">80</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span> <span class="ot">=</span> .mean, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">80%</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">gsub</span>(<span class="st">"80$"</span>, <span class="st">""</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>)) <span class="sc">|&gt;</span>  <span class="co"># Remove the "80" at the end</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Month, <span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 13: Point Forecast and Prediction Intervals from Best ARIMA Model"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 13: Point Forecast and Prediction Intervals from Best ARIMA Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Point Forecast</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">80% Prediction Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2023 Jan</td>
+<td style="text-align: right;">14.91867</td>
+<td style="text-align: left;">[13.536407770561, 16.3476167198057]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Feb</td>
+<td style="text-align: right;">13.66724</td>
+<td style="text-align: left;">[12.0743061123224, 15.3285024029326]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Mar</td>
+<td style="text-align: right;">15.13253</td>
+<td style="text-align: left;">[13.0593517101422, 17.3111572253398]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Apr</td>
+<td style="text-align: right;">14.06638</td>
+<td style="text-align: left;">[11.8739626637415, 16.3867139439862]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 May</td>
+<td style="text-align: right;">14.94237</td>
+<td style="text-align: left;">[12.38958817232, 17.659491660495]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Jun</td>
+<td style="text-align: right;">16.54485</td>
+<td style="text-align: left;">[13.5108811716834, 19.7896885020027]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Jul</td>
+<td style="text-align: right;">15.98842</td>
+<td style="text-align: left;">[12.8377258680195, 19.3759238482775]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Aug</td>
+<td style="text-align: right;">16.29218</td>
+<td style="text-align: left;">[12.8899640978551, 19.9669039979105]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Sep</td>
+<td style="text-align: right;">16.00654</td>
+<td style="text-align: left;">[12.4765948017474, 19.8367578836819]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Oct</td>
+<td style="text-align: right;">16.92421</td>
+<td style="text-align: left;">[13.0313513788104, 21.1640704336433]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Nov</td>
+<td style="text-align: right;">18.45754</td>
+<td style="text-align: left;">[14.0618538877921, 23.2605366657107]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Dec</td>
+<td style="text-align: right;">23.05513</td>
+<td style="text-align: left;">[17.462738287817, 29.1765161788236]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Jan</td>
+<td style="text-align: right;">15.38439</td>
+<td style="text-align: left;">[11.2941524631044, 19.9037986174992]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Feb</td>
+<td style="text-align: right;">14.25892</td>
+<td style="text-align: left;">[10.2700725455525, 18.6913901949697]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Mar</td>
+<td style="text-align: right;">15.74702</td>
+<td style="text-align: left;">[11.2003135661179, 20.8181914756006]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Apr</td>
+<td style="text-align: right;">14.66225</td>
+<td style="text-align: left;">[10.2400881691663, 19.6210355729572]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 May</td>
+<td style="text-align: right;">15.57661</td>
+<td style="text-align: left;">[10.742124649313, 21.0177610446771]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Jun</td>
+<td style="text-align: right;">17.24711</td>
+<td style="text-align: left;">[11.7728882370619, 23.4266528547575]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Jul</td>
+<td style="text-align: right;">16.68043</td>
+<td style="text-align: left;">[11.2112332550654, 22.8819721370526]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Aug</td>
+<td style="text-align: right;">17.00540</td>
+<td style="text-align: left;">[11.2839411276574, 23.5169692015977]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Sep</td>
+<td style="text-align: right;">16.71907</td>
+<td style="text-align: left;">[10.9379673244418, 23.3252138968436]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Oct</td>
+<td style="text-align: right;">17.68143</td>
+<td style="text-align: left;">[11.4482622196222, 24.8252202011049]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Nov</td>
+<td style="text-align: right;">19.28335</td>
+<td style="text-align: left;">[12.38083401334, 27.2131854918051]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Dec</td>
+<td style="text-align: right;">24.06476</td>
+<td style="text-align: left;">[15.432163604491, 33.9855383633039]</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>As can be seen in Figure 17, the ARIMA model point forecasts seem to be somewhat seasonal but with not any large positive trend visible - instead the trend seems to be somewhat flat. The seasonality seems to be well captured and similar to what may be expected and the ARIMA prediction intervals seems to grow as time goes on, which is reasonable as predictions further in the future are more uncertain.</p>
+<p><em>Best ETS Model Parameters</em></p>
+<p>The parameter estimates for the ETS(A,Ad,A) model can be seen below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>best_fits <span class="sc">|&gt;</span> <span class="fu">select</span>(ETS_AAdA) <span class="sc">|&gt;</span> <span class="fu">report</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Series: Turnover 
+Model: ETS(A,Ad,A) 
+Transformation: box_cox(Turnover, 0.1) 
+  Smoothing parameters:
+    alpha = 0.6807128 
+    beta  = 0.0002990292 
+    gamma = 0.07459788 
+    phi   = 0.9018567 
+
+  Initial states:
+      l[0]       b[0]        s[0]      s[-1]      s[-2]     s[-3]      s[-4]
+ 0.5471094 0.05496339 -0.06091482 -0.1681247 -0.1282229 0.3884735 0.07978952
+      s[-5]      s[-6]      s[-7]       s[-8]       s[-9]      s[-10]
+ 0.06050983 0.05789318 0.02421192 0.004980573 -0.03791351 -0.07663561
+     s[-11]
+ -0.1440469
+
+  sigma^2:  0.0092
+
+     AIC     AICc      BIC 
+578.7100 580.4286 651.3056 </code></pre>
+</div>
+</div>
+<p>As seen, the ETS smoothing parameter estimates are:</p>
+<ul>
+<li>alpha (<span class="math inline">\(\alpha\)</span>) = 0.6807128<br>
+</li>
+<li>beta (<span class="math inline">\(\beta\)</span>) = 0.0002990292<br>
+</li>
+<li>gamma (<span class="math inline">\(\gamma\)</span>) = 0.07459788<br>
+</li>
+<li>phi (<span class="math inline">\(\phi\)</span>) = 0.9018567</li>
+</ul>
+<p>The relatively high alpha signifies that the model heavily relies on the most recent observations for forecasting the level. The very low beta suggests that trend is not apparent in the model, and the quite low gamma values suggest that seasonality are present but do not dominate the model. The damping factor (phi) is close to 1, meaning the trend component will gradually diminish over time.</p>
+<p>We also see from the initial trend, b[0], as it is positive, it signifies that the trend is very slightly increasing.</p>
+<p>Compared to the previous ETS parameters, the estimates are smaller for each of the parameters - especially for beta. Additionally, the b[0] changed from negative to positive.</p>
+<p><em>Best ETS Model Forecasts and Prediction Intervals</em></p>
+<p>The point forecasts and the 80% prediction intervals for the following 24 months (Jan 2023 to Dec 2024 ) can be visualised in Figure 18 and numerically summarised in Table 14.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span> <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ETS_AAdA"</span>) <span class="sc">|&gt;</span> <span class="fu">autoplot</span>(retail, <span class="at">level =</span> <span class="dv">80</span>)  <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Figure 18: Forecast and Prediction Intervals from Best ETS Model</span><span class="sc">\n</span><span class="st">of the Next 24 Months "</span>, <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-9-ETS-forecasts-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span> </span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(.model <span class="sc">==</span> <span class="st">"ETS_AAdA"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">hilo</span>(<span class="at">level =</span> <span class="dv">80</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span> <span class="ot">=</span> .mean, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="st">`</span><span class="at">80%</span><span class="st">`</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">gsub</span>(<span class="st">"80$"</span>, <span class="st">""</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>)) <span class="sc">|&gt;</span>  <span class="co"># Remove the "80" at the end</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Month, <span class="st">`</span><span class="at">Point Forecast</span><span class="st">`</span>, <span class="st">`</span><span class="at">80% Prediction Interval</span><span class="st">`</span>) <span class="sc">|&gt;</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 14: Point Forecast and Prediction Intervals from Best ETS Model"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<caption>Table 14: Point Forecast and Prediction Intervals from Best ETS Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Month</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Point Forecast</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">80% Prediction Interval</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">2023 Jan</td>
+<td style="text-align: right;">14.95440</td>
+<td style="text-align: left;">[13.5775087379121, 16.3774896896213]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Feb</td>
+<td style="text-align: right;">13.95741</td>
+<td style="text-align: left;">[12.3984405264223, 15.580335918704]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Mar</td>
+<td style="text-align: right;">15.49193</td>
+<td style="text-align: left;">[13.5331313661932, 17.5422593615693]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Apr</td>
+<td style="text-align: right;">14.47784</td>
+<td style="text-align: left;">[12.4317722877101, 16.6314528599905]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 May</td>
+<td style="text-align: right;">15.39119</td>
+<td style="text-align: left;">[13.0351531201098, 17.8820646289349]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Jun</td>
+<td style="text-align: right;">16.61070</td>
+<td style="text-align: left;">[13.896422892683, 19.4915631741371]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Jul</td>
+<td style="text-align: right;">16.09438</td>
+<td style="text-align: left;">[13.2851339431004, 19.0887110509229]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Aug</td>
+<td style="text-align: right;">16.68472</td>
+<td style="text-align: left;">[13.6169058102621, 19.9663718177104]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Sep</td>
+<td style="text-align: right;">16.49313</td>
+<td style="text-align: left;">[13.3028950712541, 19.9183343409562]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Oct</td>
+<td style="text-align: right;">17.25201</td>
+<td style="text-align: left;">[13.777026543744, 20.9945158885369]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2023 Nov</td>
+<td style="text-align: right;">18.04070</td>
+<td style="text-align: left;">[14.2714043608473, 22.112065391931]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2023 Dec</td>
+<td style="text-align: right;">22.56585</td>
+<td style="text-align: left;">[17.7734429671922, 27.7492943351274]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Jan</td>
+<td style="text-align: right;">15.15852</td>
+<td style="text-align: left;">[11.6716230487012, 18.9562496157982]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Feb</td>
+<td style="text-align: right;">14.15049</td>
+<td style="text-align: left;">[10.7690542289069, 17.8464544628531]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Mar</td>
+<td style="text-align: right;">15.70174</td>
+<td style="text-align: left;">[11.8744833069051, 19.8929899659262]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Apr</td>
+<td style="text-align: right;">14.67648</td>
+<td style="text-align: left;">[10.9752040325418, 18.7435427641732]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 May</td>
+<td style="text-align: right;">15.59971</td>
+<td style="text-align: left;">[11.5843610825565, 20.0211544379851]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Jun</td>
+<td style="text-align: right;">16.83224</td>
+<td style="text-align: left;">[12.4226222504319, 21.6968319791489]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Jul</td>
+<td style="text-align: right;">16.31025</td>
+<td style="text-align: left;">[11.9234431388464, 21.1634665642464]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Aug</td>
+<td style="text-align: right;">16.90679</td>
+<td style="text-align: left;">[12.2728066406954, 22.0442189910247]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Sep</td>
+<td style="text-align: right;">16.71302</td>
+<td style="text-align: left;">[12.0292387676205, 21.9187954244309]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Oct</td>
+<td style="text-align: right;">17.47983</td>
+<td style="text-align: left;">[12.5019029130759, 23.0228823981443]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2024 Nov</td>
+<td style="text-align: right;">18.27668</td>
+<td style="text-align: left;">[12.9921120332112, 24.1718144112227]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2024 Dec</td>
+<td style="text-align: right;">22.84804</td>
+<td style="text-align: left;">[16.2549106588947, 30.2011831235313]</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>As can be seen in Figure 18, the ETS model point forecasts, similar to the ARIMA model point forecasts, seem to be somewhat seasonal but with not any large positive trend visible - instead the trend seems to be somewhat flat. The seasonality seems to be well captured and similar to what may be expected and the ETS prediction intervals seems to grow as time goes on, which is reasonable as predictions further in the future are more uncertain.</p>
+</section>
+<section id="question-10-obtain-and-evaluate-model-on-up-to-date-data" class="level4">
+<h4 class="anchored" data-anchor-id="question-10-obtain-and-evaluate-model-on-up-to-date-data">Question 10: Obtain and Evaluate Model on Up-to-date Data</h4>
+<p>The latest up-to-date data was taken from “Table 11. Retail turnover, state by industry subgroup, original” which can be found <a href="https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads">here</a>. The latest up-to-date data on Northern Territory’s Electrical and electronic goods retailing was obtained.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Latest Data: https://www.abs.gov.au/statistics/industry/retail-and-wholesale-trade/retail-trade-australia/mar-2025#data-downloads</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co"># After inspecting the excel sheet, I saw that my data (NT Turnover of Electrical and Electornic Goods) can be found in Column EC of sheet Data1. </span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the dates of the time series</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>retail_date <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"8501011.xlsx"</span>,</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>   <span class="at">sheet =</span> <span class="st">"Data1"</span>,</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>   <span class="at">range =</span> <span class="st">"A82:A523"</span></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the Turnover value of the time series</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>retail_turnover <span class="ot">&lt;-</span><span class="fu">read_excel</span>(</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"8501011.xlsx"</span>,</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">sheet =</span> <span class="st">"Data1"</span>,</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">range =</span> <span class="st">"EC82:EC523"</span></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Combine the dates and turnover columns, rename the columns, make it similar format to original retail data (tsibble, key, Industry, Series_ID)</span></span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>retail_updated <span class="ot">&lt;-</span> <span class="fu">bind_cols</span>(retail_date, retail_turnover) <span class="sc">|&gt;</span> </span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Month =</span> <span class="dv">1</span>, <span class="at">Turnover =</span> <span class="dv">2</span>) <span class="sc">|&gt;</span></span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">Month =</span> <span class="fu">yearmonth</span>(Month),</span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">State =</span> <span class="st">"Northern Territory"</span>,</span>
+<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">Industry =</span> <span class="st">"Electrical and electronic goods retailing"</span>,</span>
+<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">Series_ID =</span> <span class="st">"A3349598V"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">as_tsibble</span>(<span class="at">index =</span> Month, <span class="at">key =</span> <span class="fu">c</span>(State, Industry))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Figure 19 visualises the best ARIMA and ETS model point forecasts with the true turnover in Northern Territory’s Electrical &amp; Electronic Goods Retailing.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualise the two forecasts with the true value</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>(<span class="fu">tail</span>(retail_updated, <span class="dv">24</span>), <span class="at">level =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Figure 19: The Best ARIMA and ETS Forecasts for Northern Territory's</span><span class="sc">\n</span><span class="st">Electrical &amp; Electronic Goods Retailing Turnover"</span>,</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Retail Turnover (in $Million AUD)"</span>,</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="31444059_Retail_Project_files/figure-html/question-10-visualise-forecast-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>As can be seen in Figure 19, the ARIMA(1,1,0)(0,1,1)[12] model seems to better predict the point forecasts compared to the ETS(A,Ad,A). However, to confirm this, Table 15 outlines the RMSE Score for the two models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare RMSE </span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>best_forecasts <span class="sc">|&gt;</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">accuracy</span>(<span class="fu">tail</span>(retail_updated, <span class="dv">24</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(.model, RMSE) <span class="sc">|&gt;</span> </span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Table 15: RMSE Score for the Best ARIMA and ETS Model"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Table 15: RMSE Score for the Best ARIMA and ETS Model</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">.model</th>
+<th style="text-align: right;">RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">ARIMA_110011</td>
+<td style="text-align: right;">1.090783</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ETS_AAdA</td>
+<td style="text-align: right;">1.400221</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As visualised in Figure 19 and confirmed in Table 15, the ETS(A,Ad,A) Model, which we evaluated as the best for the previous test-set, actually performs worse than the ARIMA(1,1,0)(0,1,1)[12] model on the next two years - as seen in the RMSE value. As such, to predict the next two years of data, the ARIMA(1,1,0)(0,1,1)[12] is actually the better model.</p>
+</section>
+<section id="question-11-benefits-and-limitations-of-the-models-for-the-time-series" class="level4">
+<h4 class="anchored" data-anchor-id="question-11-benefits-and-limitations-of-the-models-for-the-time-series">Question 11: Benefits and Limitations of the Models for the Time Series</h4>
+<p><u>Benefits of the Models</u></p>
+<ul>
+<li>Both ARIMA and ETS models produce similar and reasonable point forecasts, successfully capturing trend and seasonality in the retail turnover data.</li>
+<li>The true turnover values fall within the 80% prediction intervals of both models, suggesting a good level of reliability for short-term forecasts.</li>
+<li>Both models were visually and logically derived, making them interpretable and justifiable in practical applications.</li>
+</ul>
+<p><u>Limitations of the Models</u></p>
+<ul>
+<li>There is model instability in terms of performance: ETS performed better on a previous test set, while ARIMA performed better on the current one — this variability reduces confidence in selecting a single “best” model.</li>
+<li>As new data is added, the underlying time series characteristics may shift, making the assumptions of stationarity (ARIMA) or exponential smoothing (ETS) less valid — the models may degrade over time without re-evaluation.</li>
+<li>Neither model passed the residual diagnostics fully: residuals from both models are still distinguishable from white noise, suggesting that some structure in the data remains unexplained, and future forecast accuracy may suffer.</li>
+<li>Cross-validation or rolling-origin evaluation was not implemented, limiting the robustness of model selection. A single train-test split may not sufficiently capture model performance over time.</li>
+<li>ETS models may struggle with sudden changes or external shocks (i.e.&nbsp;cyclical behaviour such as business cycle boom and bust), while ARIMA models, although more flexible, require more manual tuning and differencing decisions, which can be error-prone without careful diagnostics.</li>
+<li>Neither the ETS nor ARIMA model alone can adequately capture unique events or structural breaks, which could be better handled using regression models with dummy variables — for example, to account for outliers or events (such as COVID-19 impact) that should be excluded from future forecasting.</li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
