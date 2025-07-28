@@ -39,9 +39,9 @@ Created by **Jason Abi Chebli**
 - Forecasting: Out-of-sample predictions with 80% prediction intervals through to December 2024
 
 ## Files
-> [RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd) — Quarto file containing full analysis, diagnostics, and forecasts  
-> [RetailTurnoverForecast.html](RetailTurnoverForecast.html) — Rendered output for easy viewing  
-> [abs_forecast_comparison.csv](abs_forecast_comparison.csv) — Actual ABS data from Table 11 used for validating forecast accuracy
+<code>[RetailTurnoverForecast.qmd](RetailTurnoverForecast.qmd)</code> — Quarto file containing full analysis, diagnostics, and forecasts  
+<code>[RetailTurnoverForecast.html](RetailTurnoverForecast.html)</code> — Rendered output for easy viewing  
+<code>[abs_forecast_comparison.csv](abs_forecast_comparison.csv)</code> — Actual ABS data from Table 11 used for validating forecast accuracy
 
 ## Visual Highlights
 - Seasonally adjusted line plots highlighting COVID-19 impacts
